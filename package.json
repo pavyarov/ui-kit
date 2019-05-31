@@ -1,40 +1,44 @@
 {
-  "name": "ui-kit",
+  "name": "@drill4j/ui-kit",
   "version": "0.1.0",
-  "private": true,
+  "author": "Drill4J",
+  "description": "Drill4J UI components library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drill4J/ui-kit"
+  },
   "dependencies": {
     "@redneckz/react-bem-helper": "2.0.3",
-    "@types/jest": "24.0.11",
-    "@types/node": "11.13.4",
-    "@types/react": "16.8.13",
-    "@types/react-dom": "16.8.4",
-    "node-sass": "4.11.0",
-    "react": "16.8.6",
-    "react-docgen-typescript": "1.12.3",
-    "react-dom": "16.8.6",
-    "react-scripts": "2.1.8",
-    "typescript": "3.4.3"
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.3",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "typescript": "3.6.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "styleguide": "npm-run-all -p styleguidist",
-    "styleguidist": "styleguidist server",
-    "styleguide-build": "styleguidist build"
+    "build": "rollup -c && tsc",
+    "test": "jest --passWithNoTests",
+    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
+    "lint": "eslint --ignore-path .gitignore ."
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
-    "npm-run-all": "4.1.5",
-    "react-styleguidist": "9.0.7"
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
+    "eslint": "6.3.0",
+    "eslint-config-prettier": "6.1.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "node-sass": "4.11.0",
+    "prettier": "1.18.2",
+    "rollup": "1.20.3",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-sass": "1.2.2",
+    "rollup-plugin-terser": "5.1.1",
+    "rollup-plugin-typescript2": "0.24.0"
   }
 }

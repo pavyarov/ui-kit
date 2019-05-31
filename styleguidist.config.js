@@ -1,3 +1,4 @@
 module.exports = {
-  propsParser: require('react-docgen-typescript').parse,
+  ignore: 'src/components/badge/badge.tsx',
+  // propsParser: require('react-docgen-typescript').parse,
 };
