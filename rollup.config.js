@@ -2,7 +2,7 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
 import { terser } from 'rollup-plugin-terser';
-import sass from 'rollup-plugin-sass';
+import postcss from 'rollup-plugin-postcss';
 import commonjs from 'rollup-plugin-commonjs';
 
 export default {
@@ -20,8 +20,8 @@ export default {
     typescript({
       typescript: require('typescript'),
     }),
-    sass({
-      output: 'dist/bundle.css',
+    postcss({
+      modules: true,
     }),
     terser(),
   ],
