@@ -14,7 +14,7 @@
     "browser": true
   },
   "rules": {
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
     "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": [2, { "devDependencies": ["**/spec.tsx", "**/spec.ts"] }],
     "import/extensions": 0,

@@ -1,4 +1,4 @@
-# Drill4J Project · [![Build Status](https://cloud.drone.io/api/badges/Drill4J/socket/status.svg)](https://cloud.drone.io/Drill4J/socket)
+# Drill4J Project · [![Build Status](https://github.com/Drill4J/ui-kit/workflows/Publish/badge.svg)](https://github.com/Drill4J/ui-kit/actions)
 
 <img src="./logo.svg" alt="Logo" width="128" align="right">
 

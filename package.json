@@ -18,7 +18,7 @@
     "@types/node": "^12.12.25",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
-    "nanoid": "2.1.9",
+    "nanoid": "^2.1.9",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-visibility-sensor": "^5.1.1",
@@ -28,7 +28,7 @@
     "build": "rollup -c && tsc",
     "test": "jest --passWithNoTests",
     "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint . --ext .ts,.tsx",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
