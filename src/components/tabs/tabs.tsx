@@ -19,10 +19,11 @@ export const TabsPanel = tabsPanel((props: Props) => {
 
   return (
     <div className={className}>
-      {React.Children.map(children, (child: React.ReactElement<any>, index: number) => React.cloneElement(child, {
-        onClick: () => onSelect && onSelect(child.props.name || index),
-        active: (child.props.name || index) === activeTab,
-      }))}
+      {React.Children.map(children, (child: React.ReactElement, index: number) =>
+        React.cloneElement(child, {
+          onClick: () => onSelect && onSelect(child.props.name || index),
+          active: (child.props.name || index) === activeTab,
+        }))}
     </div>
   );
 });

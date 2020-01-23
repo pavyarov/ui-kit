@@ -8,28 +8,30 @@ import styles from './checkbox.module.scss';
 
 const checkbox = BEM(styles);
 
-export const Checkbox = checkbox(({
-  className, onChange, checked, label, value,
-}: CheckboxProps) => {
-  const handleOnChange = () => {
-    onChange
-      && onChange({
-        target: {
-          type: 'checkbox',
-          checked: !checked,
-        },
-      });
-  };
-  return (
-    <div className={className} onClick={handleOnChange}>
-      <CheckboxInput name={value} checked={checked} />
-      <IconWrapper>
-        <Icons.Checkbox />
-      </IconWrapper>
-      <Label>{label}</Label>
-    </div>
-  );
-});
+export const Checkbox = checkbox(
+  ({
+    className, onChange, checked, label, value,
+  }: CheckboxProps) => {
+    const handleOnChange = () => {
+      onChange &&
+        onChange({
+          target: {
+            type: 'checkbox',
+            checked: !checked,
+          },
+        } as React.ChangeEvent<HTMLInputElement>);
+    };
+    return (
+      <div className={className} onClick={handleOnChange}>
+        <CheckboxInput name={value} checked={checked} />
+        <IconWrapper>
+          <Icons.Checkbox />
+        </IconWrapper>
+        <Label>{label}</Label>
+      </div>
+    );
+  },
+);
 
 const CheckboxInput = checkbox.input(
   input({ type: 'checkbox', checked: false, name: '' } as {

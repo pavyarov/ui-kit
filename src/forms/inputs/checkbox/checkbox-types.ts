@@ -1,6 +1,6 @@
 export interface CheckboxProps {
   className?: string;
-  onChange?: (event?: any) => any;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   checked?: boolean;
   label?: string;
   disabled?: boolean;
