@@ -1,6 +1,6 @@
 {
   "name": "@drill4j/ui-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Drill4J",
   "license": "Apache-2.0",
   "description": "Drill4J UI components library",
@@ -28,8 +28,7 @@
     "test:coverage": "jest --coverage",
     "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook watch-css -s ./src"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",

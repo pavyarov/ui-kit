@@ -27,8 +27,13 @@ module.exports = ({ config }) => {
   });
   config.module.rules.push({
     test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-    loader: 'file-loader',
-    include: path.resolve(__dirname, '../src/')
+    use: {
+      loader: 'file-loader',
+      query: {
+        name: '[name].[ext]'
+      }
+    },
+    include: path.resolve(__dirname, '../')
   })
   config.resolve.extensions.push('.ts', '.tsx');
 
