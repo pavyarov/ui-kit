@@ -8,5 +8,7 @@ export {
 export {
   FormGroup, Inputs, Button, LinkButton, CancelButton, DropdownInput,
 } from './forms';
-export { Panel, Section } from './layouts';
+export {
+  Panel, PanelSpread, PanelItem, Section,
+} from './layouts';
 export { useClickOutside, useElementSize } from './hooks';
