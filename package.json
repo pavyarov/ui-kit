@@ -1,6 +1,6 @@
 {
   "name": "@drill4j/ui-kit",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "Drill4J",
   "license": "Apache-2.0",
   "description": "Drill4J UI components library",
@@ -61,7 +61,7 @@
     "jest": "^25.4.0",
     "jest-css-modules-transform": "^4.0.0",
     "lint-staged": "^10.1.7",
-    "node-sass": "^4.14.0",
+    "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-test-renderer": "^16.13.1",

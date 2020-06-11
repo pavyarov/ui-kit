@@ -55,6 +55,9 @@ import { path as logoPath } from './path/logo.path';
 import { path as unicornPath } from './path/unicorn.path';
 import { path as unicornWithCirclePath } from './path/unicorn-with-circle.path';
 import { path as unaffectedPath } from './path/unaffected.path';
+import { path as cancelPath } from './path/cancel.path';
+import { path as successPath } from './path/success.path';
+import { path as testToCodePath } from './path/test-to-code.path';
 import { declareIcon } from './declare-icon';
 
 export const Icons = {
@@ -123,4 +126,11 @@ export const Icons = {
   Unicorn: declareIcon(unicornPath, { defaultHeight: 26, defaultWidth: 26 }),
   UnicornWithCircle: declareIcon(unicornWithCirclePath, { defaultHeight: 26, defaultWidth: 26 }),
   Unaffected: declareIcon(unaffectedPath),
+  Cancel: declareIcon(cancelPath),
+  Success: declareIcon(successPath),
+  Test2Code: declareIcon(testToCodePath, {
+    defaultWidth: 32,
+    defaultHeight: 32,
+    viewBox: '0 0 32 32',
+  }),
 };

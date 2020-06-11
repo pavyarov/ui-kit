@@ -6,11 +6,13 @@ interface Attrs {
   className?: string;
   align?: 'space-between' | 'end' | 'center';
   verticalAlign?: 'center' | 'stretch' | 'start' | 'end';
+  direction?: 'row' | 'column';
+  'data-test'?: string;
 }
 
 const panel = BEM(styles);
 
-export const Panel = panel(div({ style: undefined, onClick: () => {} } as Attrs));
+export const Panel = panel(div({ 'data-test': '', style: undefined, onClick: () => {} } as Attrs));
 export const PanelItem = panel.item(
   div({ onClick: () => {} } as {
     className?: string;
