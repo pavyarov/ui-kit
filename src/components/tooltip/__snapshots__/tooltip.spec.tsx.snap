@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tooltip should match snapshot 1`] = `
-<div
-  className="tooltip tooltip--position--bottom"
+<Context.Provider
+  value=""
 >
-  <div
-    onBlur={[Function]}
-    onMouseOut={[Function]}
-    onMouseOverCapture={[Function]}
+  <Unknown
+    className="tooltip"
+    data-modifiers=""
+    message={
+      <span>
+        Tooltip
+      </span>
+    }
   >
     <div>
       Tooltip
     </div>
-  </div>
-</div>
+  </Unknown>
+</Context.Provider>
 `;

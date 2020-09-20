@@ -18,7 +18,7 @@ const modal = BEM(styles);
 export const Modal = modal(({
   className, children, onToggle, isOpen,
 }: Props) => (
-  <Portal>
+  <Portal rootElementId="modal">
     {isOpen && (
       <div className={className}>
         <ModalCard>

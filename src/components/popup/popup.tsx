@@ -30,7 +30,7 @@ export const Popup = popup(
     closeOnFadeClick = false,
   }: Props) => (
     <div className={className}>
-      <Portal>
+      <Portal rootElementId="modal">
         {isOpen && (
           <div className={className}>
             <Content type={type}>
