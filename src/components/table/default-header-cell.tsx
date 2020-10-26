@@ -21,7 +21,7 @@ export const DefaultHeaderCell = defaultHeaderCell(({
   <>
     {onSort && sort ? (
       <div className={className} onClick={() => onSort({ order: invertOrder(sort.order), fieldName: name })}>
-        <SortArrows order={name === sort.fieldName ? sort.order : null} />
+        {name !== 'selector' && <SortArrows order={name === sort.fieldName ? sort.order : null} />}
         {label}
       </div>
     ) : label}

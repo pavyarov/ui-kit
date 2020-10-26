@@ -82,6 +82,12 @@
     }
   }
 
+  &__cell-content {
+    &--sortable-align {
+      padding-left: 24px;
+    }
+  }
+
   &--columns-size {
     &--wide {
       tbody {

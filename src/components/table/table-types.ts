@@ -17,6 +17,7 @@ export interface ColumnProps {
   width?: string;
   colSpan?: number;
   align?: Align;
+  sortableAlign?: boolean;
 }
 
 export interface ExpandSchema {
