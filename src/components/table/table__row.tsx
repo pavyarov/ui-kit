@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BEM, tag } from '@redneckz/react-bem-helper';
+import { BEM } from '@redneckz/react-bem-helper';
 
 import { get } from './get';
 import { DefaultCell } from './default-cell';
@@ -36,13 +36,13 @@ export const TableRow = BEM(styles).row(
       <tr className={className}>
         {columns.map((column) => {
           const {
-            Cell: ColumnCell, name, colSpan, width, align, sortableAlign,
+            Cell: ColumnCell, name, colSpan, width, align, paddingLeft, paddingRight,
           } = column;
           const Cell = ColumnCell || DefaultCell;
           return (
-            <CellContent key={name} colSpan={colSpan} style={{ width }} align={align} sortableAlign={sortableAlign}>
+            <td key={name} colSpan={colSpan} style={{ width, paddingLeft, paddingRight }} align={align}>
               <Cell value={get(item, name)} item={item} rowIndex={index} />
-            </CellContent>
+            </td>
           );
         })}
       </tr>
@@ -56,8 +56,3 @@ export const TableRow = BEM(styles).row(
     </>
   ),
 );
-
-const CellContent = BEM(styles).cellContent(tag('td')({
-  align: 'left',
-  sortableAlign: false,
-} as { colSpan?: number; align: string; sortableAlign?: boolean}));

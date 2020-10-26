@@ -44,7 +44,7 @@ storiesOf('Table', module).add('Table', () => {
         name="funcDefinition"
         label="Func Definition"
         Cell={({ value }) => <div>{(value)}</div>}
-        sortableAlign
+        paddingLeft="24px"
       />
       <Column
         name="funcExpression"
